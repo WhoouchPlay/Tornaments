@@ -18,6 +18,6 @@ async def sign_uo(user_model, db: AsyncSession):
 
 
 async def sign_in(username: str, password: str, db: AsyncSession) -> Optional[str]:
-    user: Optional[User] = await db.scalar(select(User)).filter_by(username=username)
+    user: Optional[User] = await db.scalar(select(User).filter_by(username=username))
     if user:
         return user.get_token(pwd=password)

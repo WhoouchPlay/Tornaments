@@ -8,7 +8,7 @@ from app.db.base import Base
 
 
 class Role(enum.Enum):
-    teamload = enum.auto()
+    teamlead = enum.auto()
     member = enum.auto()
 
 
